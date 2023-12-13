@@ -17,6 +17,14 @@ bundle install
 bundle exec rake db:drop db:create db:migrate db:seed
 ```
 
+#### Para executar o rails utilize o comando abaixo:
+
+```shell
+bundle exec rails s
+```
+
+Após executar os passos acima já é possivel realizar uma requisão de previsão do tempo.
+
 Para criar uma requisição de previsão do tempo
 
 
