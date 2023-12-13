@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'twitter_service'
+require_relative '../../app/services/twitter_service'
 
 RSpec.describe TwitterService, type: :service do
   describe '#get_tweets' do

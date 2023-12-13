@@ -1,17 +1,17 @@
 development:
   consumer_key: 'your_development_consumer_key'
   consumer_secret: 'your_development_consumer_secret'
-  access_token: 'your_development_access_token'
-  access_token_secret: 'your_development_access_token_secret'
+  access_token: ypcNxLsOTRYoG6PX1g6dTgPeN
+  access_token_secret: kw3JI3QQ2I4kgrAgOHYT61bMG8w43mxEel5MI4XGxnd0iLl26K
 
 test: 
   consumer_key: 'your_development_consumer_key'
   consumer_secret: 'your_development_consumer_secret'
-  access_token: 'your_development_access_token'
-  access_token_secret: 'your_development_access_token_secret'
+  access_token: ypcNxLsOTRYoG6PX1g6dTgPeN
+  access_token_secret: kw3JI3QQ2I4kgrAgOHYT61bMG8w43mxEel5MI4XGxnd0iLl26K
 
 production:
   consumer_key: 'your_development_consumer_key'
   consumer_secret: 'your_development_consumer_secret'
-  access_token: 'your_development_access_token'
-  access_token_secret: 'your_development_access_token_secret'
+  access_token: ypcNxLsOTRYoG6PX1g6dTgPeN
+  access_token_secret: kw3JI3QQ2I4kgrAgOHYT61bMG8w43mxEel5MI4XGxnd0iLl26K

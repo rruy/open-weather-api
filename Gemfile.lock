@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/rruy/open-weather-sdk.git
+  revision: 67608f0a6b37317ba3f1c23199572ae833bf0a8b
+  ref: master
+  specs:
+    open_weather_sdk (0.1.0)
+      openweather2
+      rspec-json_expectations
+
+GIT
   remote: https://github.com/sferik/twitter.git
   revision: 68afab334d8df4c024668d81f7641806a991be9f
   specs:
@@ -89,6 +98,7 @@ GEM
       msgpack (~> 1.2)
     buftok (0.3.0)
     builder (3.2.4)
+    byebug (11.1.3)
     capybara (3.39.2)
       addressable
       matrix
@@ -135,6 +145,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    json (2.7.1)
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
@@ -156,7 +167,7 @@ GEM
     msgpack (1.7.2)
     multipart-post (2.3.0)
     naught (1.1.0)
-    net-imap (0.4.7)
+    net-imap (0.4.8)
       date
       net-protocol
     net-pop (0.1.2)
@@ -168,6 +179,8 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
+    openweather2 (0.1.8)
+      json
     psych (5.1.1.1)
       stringio
     public_suffix (5.0.4)
@@ -218,6 +231,7 @@ GEM
     rspec-expectations (3.12.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
+    rspec-json_expectations (2.2.0)
     rspec-mocks (3.12.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
@@ -274,10 +288,12 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  byebug
   capybara
   debug
   importmap-rails
   jbuilder
+  open_weather_sdk (= 0.1.0)!
   puma (~> 5.0)
   rails (~> 7.0.8)
   redis (~> 4.0)

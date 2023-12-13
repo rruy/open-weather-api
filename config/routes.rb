@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'api/index'
-  get 'api/show'
+  namespace :api do
+    resources :weather, only: [:index, :create]
+  end
 end

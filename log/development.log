@@ -14,3 +14,453 @@ Processing by ApiController#index as HTML
 Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 276)
 
 
+Started GET "/" for ::1 at 2023-12-12 20:13:07 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 488)
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4226)
+
+
+Started GET "/api/weather" for ::1 at 2023-12-12 20:13:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/weather"):
+  
+Started GET "/api/weather/index" for ::1 at 2023-12-12 20:13:22 -0300
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+Started GET "/api/weather" for ::1 at 2023-12-12 20:13:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/weather"):
+  
+Started GET "/api/weather" for ::1 at 2023-12-12 20:13:34 -0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/api/weather" for ::1 at 2023-12-12 20:14:24 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/weather"):
+  
+Started GET "/api/weather" for ::1 at 2023-12-12 20:14:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/weather"):
+  
+Started GET "/rails/info/routes?path=we" for ::1 at 2023-12-12 20:14:30 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"we"}
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 3146)
+
+
+Started GET "/rails/info/routes?path=weather" for ::1 at 2023-12-12 20:14:31 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"weather"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 717)
+
+
+Started GET "/api/weather" for ::1 at 2023-12-12 20:15:40 -0300
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+Started GET "/api/weather" for ::1 at 2023-12-12 20:15:56 -0300
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+Started GET "/api/weather" for ::1 at 2023-12-12 20:16:41 -0300
+Processing by Api::WeatherController#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1487)
+
+
+Started GET "/api/weather/1" for ::1 at 2023-12-12 20:16:56 -0300
+Processing by Api::WeatherController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 461)
+
+
+  
+NameError (uninitialized constant Api::WeatherController::Weather):
+  
+app/controllers/api/weather_controller.rb:8:in `show'
+Started GET "/" for ::1 at 2023-12-12 21:12:42 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 488)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 4225)
+
+
+Started GET "/api/weather" for ::1 at 2023-12-12 21:12:45 -0300
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/weather_controller.rb:1:in `<main>'
+Started GET "/api/weather/1" for ::1 at 2023-12-12 21:12:48 -0300
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/weather_controller.rb:1:in `<main>'
+Started GET "/api/weather/1" for ::1 at 2023-12-12 21:12:58 -0300
+Processing by Api::WeatherController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1735ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4184)
+
+
+Started POST "/api/weather/" for ::1 at 2023-12-12 21:46:11 -0300
+Processing by Api::WeatherController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 580)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.8) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.8) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.8) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.8) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.8) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.8) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.8) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.8) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.8) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.8) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.8) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.8) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.8) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.8) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.8) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.8) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.8) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.8) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.8) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/weather/" for ::1 at 2023-12-12 21:47:16 -0300
+Processing by Api::WeatherController#create as */*
+Completed 500 Internal Server Error in 2226ms (ActiveRecord: 0.0ms | Allocations: 5541)
+
+
+  
+NameError (uninitialized constant Api::WeatherController::TwitterServiceJob):
+  
+app/controllers/api/weather_controller.rb:19:in `create'
+Started POST "/api/weather/" for ::1 at 2023-12-12 21:48:05 -0300
+Processing by Api::WeatherController#create as */*
+[ActiveJob] Enqueued TwitterServiceJob (Job ID: d7fec17d-34f5-4540-bd47-f8ceda4b6b18) to Async(default) with arguments: :post, "23°C e Nublado em Rio de Janeiro em 12/12. Média para os próximos dias: 23.85°C em 13/12, 25.22°C em 14/12, 27.42°C em 15/12, 27.83°C em 16/12, 27.56°C em 17/12, 26.21°C em 18/12."
+Completed 200 OK in 2417ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 4125)
+
+
+[ActiveJob] [TwitterServiceJob] [d7fec17d-34f5-4540-bd47-f8ceda4b6b18] Performing TwitterServiceJob (Job ID: d7fec17d-34f5-4540-bd47-f8ceda4b6b18) from Async(default) enqueued at 2023-12-13T00:48:08Z with arguments: :post, "23°C e Nublado em Rio de Janeiro em 12/12. Média para os próximos dias: 23.85°C em 13/12, 25.22°C em 14/12, 27.42°C em 15/12, 27.83°C em 16/12, 27.56°C em 17/12, 26.21°C em 18/12."
+[ActiveJob] [TwitterServiceJob] [d7fec17d-34f5-4540-bd47-f8ceda4b6b18] Performed TwitterServiceJob (Job ID: d7fec17d-34f5-4540-bd47-f8ceda4b6b18) from Async(default) in 0.26ms
+Started POST "/api/weather/" for ::1 at 2023-12-12 21:49:37 -0300
+Processing by Api::WeatherController#create as */*
+[ActiveJob] Enqueued TwitterServiceJob (Job ID: 11546caa-ee0d-47c1-8a66-f29b8cd9e46f) to Async(default) with arguments: :post, "23°C e Nublado em Rio de Janeiro em 12/12. Média para os próximos dias: 23.85°C em 13/12, 25.22°C em 14/12, 27.42°C em 15/12, 27.83°C em 16/12, 27.56°C em 17/12, 26.21°C em 18/12."
+Completed 200 OK in 1547ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 5804)
+
+
+[ActiveJob] [TwitterServiceJob] [11546caa-ee0d-47c1-8a66-f29b8cd9e46f] Performing TwitterServiceJob (Job ID: 11546caa-ee0d-47c1-8a66-f29b8cd9e46f) from Async(default) enqueued at 2023-12-13T00:49:39Z with arguments: :post, "23°C e Nublado em Rio de Janeiro em 12/12. Média para os próximos dias: 23.85°C em 13/12, 25.22°C em 14/12, 27.42°C em 15/12, 27.83°C em 16/12, 27.56°C em 17/12, 26.21°C em 18/12."
+[ActiveJob] [TwitterServiceJob] [11546caa-ee0d-47c1-8a66-f29b8cd9e46f] Error performing TwitterServiceJob (Job ID: 11546caa-ee0d-47c1-8a66-f29b8cd9e46f) from Async(default) in 237.5ms: Twitter::Error::Unauthorized (Invalid or expired token.):
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/request.rb:103:in `fail_or_return_response_body'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/request.rb:42:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:50:in `perform_request'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:72:in `perform_request_with_object'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:64:in `perform_post_with_object'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/tweets.rb:157:in `update!'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/tweets.rb:128:in `update'
+/media/ruy-pc/Storage/projetos/Challegers/Caiena/open-weather-api/app/services/twitter_service.rb:9:in `post'
+/media/ruy-pc/Storage/projetos/Challegers/Caiena/open-weather-api/app/jobs/twitter_job.rb:7:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:65:in `block in _perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/i18n-1.14.1/lib/i18n.rb:322:in `with_locale'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:64:in `_perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:52:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications.rb:206:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:35:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:14:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:18:in `block in perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:25:in `tag_logger'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:18:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:30:in `block in execute'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/reloader.rb:71:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:28:in `execute'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started POST "/api/weather/" for ::1 at 2023-12-12 21:58:49 -0300
+Processing by Api::WeatherController#create as */*
+[ActiveJob] Enqueued TwitterServiceJob (Job ID: 5535ecd3-125f-457e-8d12-daafd043b1ef) to Async(default) with arguments: :post, "18°C e Sol em São Paulo em 12/12. Média para os próximos dias: 22.19°C em 13/12, 24.91°C em 14/12, 27.56°C em 15/12, 27.72°C em 16/12, 27.79°C em 17/12, 25.54°C em 18/12."
+Completed 200 OK in 1696ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 5813)
+
+
+[ActiveJob] [TwitterServiceJob] [5535ecd3-125f-457e-8d12-daafd043b1ef] Performing TwitterServiceJob (Job ID: 5535ecd3-125f-457e-8d12-daafd043b1ef) from Async(default) enqueued at 2023-12-13T00:58:50Z with arguments: :post, "18°C e Sol em São Paulo em 12/12. Média para os próximos dias: 22.19°C em 13/12, 24.91°C em 14/12, 27.56°C em 15/12, 27.72°C em 16/12, 27.79°C em 17/12, 25.54°C em 18/12."
+[ActiveJob] [TwitterServiceJob] [5535ecd3-125f-457e-8d12-daafd043b1ef] Error performing TwitterServiceJob (Job ID: 5535ecd3-125f-457e-8d12-daafd043b1ef) from Async(default) in 229.37ms: Twitter::Error::Unauthorized (Invalid or expired token.):
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/request.rb:103:in `fail_or_return_response_body'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/request.rb:42:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:50:in `perform_request'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:72:in `perform_request_with_object'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:64:in `perform_post_with_object'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/tweets.rb:157:in `update!'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/tweets.rb:128:in `update'
+/media/ruy-pc/Storage/projetos/Challegers/Caiena/open-weather-api/app/services/twitter_service.rb:9:in `post'
+/media/ruy-pc/Storage/projetos/Challegers/Caiena/open-weather-api/app/jobs/twitter_job.rb:7:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:65:in `block in _perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/i18n-1.14.1/lib/i18n.rb:322:in `with_locale'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:64:in `_perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:52:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications.rb:206:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:35:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:14:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:18:in `block in perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:25:in `tag_logger'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:18:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:30:in `block in execute'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/reloader.rb:71:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:28:in `execute'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started POST "/api/weather/" for ::1 at 2023-12-12 22:00:24 -0300
+  
+TypeError (superclass mismatch for class TwitterServiceJob):
+  
+app/jobs/twitter_job.rb:3:in `<main>'
+app/controllers/api/weather_controller.rb:1:in `require_relative'
+app/controllers/api/weather_controller.rb:1:in `<main>'
+Started POST "/api/weather/" for ::1 at 2023-12-12 22:00:40 -0300
+  
+TypeError (superclass mismatch for class TwitterServiceJob):
+  
+app/jobs/twitter_job.rb:3:in `<main>'
+app/controllers/api/weather_controller.rb:1:in `require_relative'
+app/controllers/api/weather_controller.rb:1:in `<main>'
+Started POST "/api/weather/" for ::1 at 2023-12-12 22:01:26 -0300
+Processing by Api::WeatherController#create as */*
+Completed 500 Internal Server Error in 28562ms (ActiveRecord: 0.0ms | Allocations: 75626)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/weather_controller.rb:20:in `create'
+Started POST "/api/weather/" for ::1 at 2023-12-12 22:03:34 -0300
+Processing by Api::WeatherController#create as */*
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 1629)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: city):
+  
+app/controllers/api/weather_controller.rb:28:in `city_param'
+app/controllers/api/weather_controller.rb:18:in `create'
+Started POST "/api/weather/" for ::1 at 2023-12-12 22:04:00 -0300
+Processing by Api::WeatherController#create as */*
+  Parameters: {"city"=>{"name"=>"Porto Alegre"}, "weather"=>{"city"=>{"name"=>"Porto Alegre"}}}
+Completed 500 Internal Server Error in 660ms (ActiveRecord: 0.0ms | Allocations: 1622)
+
+
+  
+NoMethodError (undefined method `latitude' for nil:NilClass):
+  
+app/controllers/api/weather_controller.rb:18:in `create'
+Started POST "/api/weather/" for ::1 at 2023-12-12 22:04:20 -0300
+Processing by Api::WeatherController#create as */*
+  Parameters: {"city"=>{"name"=>"Porto Alegre"}, "weather"=>{"city"=>{"name"=>"Porto Alegre"}}}
+Completed 500 Internal Server Error in 25047ms (ActiveRecord: 0.0ms | Allocations: 69379)
+
+
+  
+NoMethodError (undefined method `latitude' for nil:NilClass):
+  
+app/controllers/api/weather_controller.rb:19:in `create'
+Started POST "/api/weather/" for ::1 at 2023-12-12 22:04:48 -0300
+Processing by Api::WeatherController#create as */*
+  Parameters: {"city"=>{"name"=>"Porto Alegre"}, "weather"=>{"city"=>{"name"=>"Porto Alegre"}}}
+Completed 500 Internal Server Error in 1957ms (ActiveRecord: 0.0ms | Allocations: 13895)
+
+
+  
+NameError (uninitialized constant Api::WeatherController::TwitterServiceJob):
+  
+app/controllers/api/weather_controller.rb:21:in `create'
+Started POST "/api/weather/" for ::1 at 2023-12-12 22:05:13 -0300
+Processing by Api::WeatherController#create as */*
+  Parameters: {"city"=>{"name"=>"Porto Alegre"}, "weather"=>{"city"=>{"name"=>"Porto Alegre"}}}
+[ActiveJob] Enqueued TwitterJob (Job ID: 5f460cd9-6d2d-427a-a5b5-7018cc1816aa) to Async(default) with arguments: :post, "23°C e Sol em Porto Alegre em 12/12. Média para os próximos dias: 26.36°C em 13/12, 27.80°C em 14/12, 28.88°C em 15/12, 26.68°C em 16/12, 29.58°C em 17/12, 28.89°C em 18/12."
+Completed 200 OK in 3880ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 72444)
+
+
+[ActiveJob] [TwitterJob] [5f460cd9-6d2d-427a-a5b5-7018cc1816aa] Performing TwitterJob (Job ID: 5f460cd9-6d2d-427a-a5b5-7018cc1816aa) from Async(default) enqueued at 2023-12-13T01:05:17Z with arguments: :post, "23°C e Sol em Porto Alegre em 12/12. Média para os próximos dias: 26.36°C em 13/12, 27.80°C em 14/12, 28.88°C em 15/12, 26.68°C em 16/12, 29.58°C em 17/12, 28.89°C em 18/12."
+[ActiveJob] [TwitterJob] [5f460cd9-6d2d-427a-a5b5-7018cc1816aa] Error performing TwitterJob (Job ID: 5f460cd9-6d2d-427a-a5b5-7018cc1816aa) from Async(default) in 262.54ms: Twitter::Error::Unauthorized (Invalid or expired token.):
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/request.rb:103:in `fail_or_return_response_body'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/request.rb:42:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:50:in `perform_request'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:72:in `perform_request_with_object'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/utils.rb:64:in `perform_post_with_object'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/tweets.rb:157:in `update!'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bundler/gems/twitter-68afab334d8d/lib/twitter/rest/tweets.rb:128:in `update'
+/media/ruy-pc/Storage/projetos/Challegers/Caiena/open-weather-api/app/services/twitter_service.rb:9:in `post'
+/media/ruy-pc/Storage/projetos/Challegers/Caiena/open-weather-api/app/jobs/twitter_job.rb:7:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:65:in `block in _perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/i18n-1.14.1/lib/i18n.rb:322:in `with_locale'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:64:in `_perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:52:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/notifications.rb:206:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:35:in `instrument'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/instrumentation.rb:14:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:18:in `block in perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:25:in `tag_logger'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/logging.rb:18:in `perform_now'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:30:in `block in execute'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/reloader.rb:71:in `wrap'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activesupport-7.0.8/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/execution.rb:28:in `execute'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/activejob-7.0.8/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/home/ruy-pc/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/concurrent-ruby-1.2.2/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
