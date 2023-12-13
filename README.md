@@ -1,24 +1,46 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto para implementação de integração com a OpenWeatherSdk
 
-Things you may want to cover:
 
-* Ruby version
+## Instalação e configurações
 
-* System dependencies
+#### Para instalação dos pacotes necessários:
 
-* Configuration
+```shell
+bundle install
+```
 
-* Database creation
+#### Para instalação e configuração do projeto execute os seguintes comandos:
 
-* Database initialization
+```shell
+bundle exec rake db:drop db:create db:migrate db:seed
+```
 
-* How to run the test suite
+Para criar uma requisição de previsão do tempo
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+POST: http://localhost:3000/api/weather
 
-* ...
+
+Payload:
+
+
+```shell
+{
+    "city": { "name": "Porto Alegre"}
+}
+```
+
+Resultado experado:
+
+```shell
+{
+    "forecast": "23°C e Sol em Porto Alegre em 12/12. Média para os próximos dias: 26.36°C em 13/12, 27.80°C em 14/12, 28.88°C em 15/12, 26.68°C em 16/12, 29.58°C em 17/12, 28.89°C em 18/12."
+}
+```
+
+Example:
+
+![Alt text](/forecast_postman.png?raw=true "Request Postman")
+
